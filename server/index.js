@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { response } = require("express");
 const express = require("express");
 const { request } = require("http");
 
@@ -88,6 +89,8 @@ let gameList = [game1, game2, game3, game4, game5];
 let movieList = [movie1, movie2, movie3, movie4, movie5];
 let bookList = [book1, book2, book3];
 
+let mediaList = [gameList, movieList, bookList];
+
 const app = express();
 
 const myMiddleware = (request, response, next) => {
@@ -131,6 +134,12 @@ app.route("/listBooks").get((request, response) => {
   let listBooks = bookList;
 
   response.status(200).json(listBooks);
+});
+
+app.route("/listMedia").get((request, response) => {
+  let listMedia = mediaList;
+
+  response.status(200).json(listMedia);
 });
 
 app.route("/**").get((request, response) => {
