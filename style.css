@@ -1,0 +1,135 @@
+html {
+  background-color: lightgray;
+}
+.flex-child,
+.second-flex-container,
+.second-flex-container-red {
+  background-color: gray;
+}
+header {
+  background: aqua;
+  background-size: cover;
+  /* max-height: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+header > a {
+  text-decoration: none;
+  background-color: white;
+  font-size: 1.5em;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+header > #headerTitle {
+  border: 2px solid black;
+  background-color: gray;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px 5px;
+}
+@media (max-width: 549px){
+  .hidden--mobile {
+    display: none !important;
+  }
+}
+header {
+  height: 100vh;
+}
+#tests tbody {
+  width: 100%;
+}
+
+#tests th {
+  text-align: left;
+}
+
+#tests td,th {
+  width: 25%;
+}
+
+  nav {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  nav > i {
+    padding: 1rem;
+    font-size: 2em;
+  }
+
+  nav > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 0;
+  }
+
+  nav > ul > li {
+    padding: .5rem;
+    list-style-type: none;
+    background-color: gray;
+  }
+
+
+@media (min-width: 550px){
+  header {
+    height: 25vh;
+  }
+
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0;
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid;
+    padding: .5rem .5rem;
+    border-radius: 25px;
+  }
+
+  nav > .fa-bars {
+    display: none;
+  }
+}
+
+h3,
+h2,
+h4,
+h5 {
+  text-decoration: underline;
+}
+.flex-container {
+  display: flex;
+  /* flex-direction: row; */
+}
+.intro-paragraph{
+  border: 2px solid black;
+  margin-bottom: 10px;
+  padding-left: 2%;
+  background-color: gray;
+}
+.intro-paragraph > h3 {
+  text-align: center;
+}
+.flex-child {
+  flex: 1;
+  flex-direction: column;
+  border: 2px solid black;
+  padding-left: 2%;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+@media (min-width: 550px) {
+  nav > .fa-bars {
+    display: none;
+  }
+}
