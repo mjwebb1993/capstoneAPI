@@ -37,6 +37,24 @@ function addEventListeners() {
     );
 }
 
+router.hooks({
+  before: (done, params) => {
+    const page =
+      params && params.hasOwnProperty("page")
+        ? capitalize(params.page)
+        : "Home";
+    // fetchDataByView(state[page]);
+    // done();
+    switch (page) {
+      case "MediaList":
+        break;
+
+      default:
+        done();
+    }
+  }
+});
+
 router
   .on({
     "/": () => render(state.Home),
