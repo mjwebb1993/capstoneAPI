@@ -68,7 +68,11 @@ let gameList = [game1, game2, game3, game4, game5];
 let movieList = [movie1, movie2, movie3, movie4, movie5];
 let bookList = [book1, book2, book3];
 
-let mediaList = [gameList, movieList, bookList];
+let mediaList = {
+  "Games": gameList,
+  "Movies": movieList,
+  "Books": bookList
+};
 
 const myMiddleware = (request, response, next) => {
   // do something with request and/or response
