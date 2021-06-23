@@ -10,7 +10,7 @@ const morgan = require("morgan");
 
 app.use(morgan("dev")); // use the myMiddleware for every request to the app
 app.use(express.json());
-app.use(cors);
+// app.use(cors);
 
 let db;
 const con = MongoClient.connect(
