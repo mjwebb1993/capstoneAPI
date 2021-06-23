@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 mongoose.connect(process.env.DB_CONNECT);
-const cors = require("cors");
+// const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const morgan = require("morgan");
 
