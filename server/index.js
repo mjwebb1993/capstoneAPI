@@ -3,13 +3,13 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 mongoose.connect(process.env.DB_CONNECT);
-const cors = require("cors");
+// const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
-const morgan = require("morgan");
+// const morgan = require("morgan");
 
 
-app.use(morgan("dev")); // use the myMiddleware for every request to the app
-app.use(express.json());
+// app.use(myMiddleware); // use the myMiddleware for every request to the app
+// app.use(express.json());
 // app.use(cors);
 
 let db;
@@ -70,9 +70,14 @@ let bookList = [book1, book2, book3];
 
 let mediaList = [gameList, movieList, bookList];
 
+const myMiddleware = (request, response, next) => {
+  // do something with request and/or response
+  console.log(request.method, request.path);
+  next(); // tell express to move to the next middleware function
+};
 
 // CORS Middleware
-const cor = (request, response, next) => {
+const cors = (request, response, next) => {
   response.setHeader(
     "Access-Control-Allow-Headers",
     "X-Requested-With,content-type, Accept,Authorization,Origin"
@@ -85,6 +90,10 @@ const cor = (request, response, next) => {
   response.setHeader("Access-Control-Allow-Credentials", true);
   next();
 };
+app.use(myMiddleware); // use the myMiddleware for every request to the app
+app.use(express.json());
+app.use(cors);
+
 
 app.route("/listGames").get((request, response) => {
   let listGames = gameList;
