@@ -10,7 +10,7 @@ const morgan = require("morgan");
 
 app.use(morgan("dev")); // use the myMiddleware for every request to the app
 app.use(express.json());
-// app.use(cors);
+app.use(cors);
 
 let db;
 const con = MongoClient.connect(
@@ -72,19 +72,19 @@ let mediaList = [gameList, movieList, bookList];
 
 
 // CORS Middleware
-// const cor = (request, response, next) => {
-//   response.setHeader(
-//     "Access-Control-Allow-Headers",
-//     "X-Requested-With,content-type, Accept,Authorization,Origin"
-//   );
-//   response.setHeader("Access-Control-Allow-Origin", "*");
-//   response.setHeader(
-//     "Access-Control-Allow-Methods",
-//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-//   );
-//   response.setHeader("Access-Control-Allow-Credentials", true);
-//   next();
-// };
+const cor = (request, response, next) => {
+  response.setHeader(
+    "Access-Control-Allow-Headers",
+    "X-Requested-With,content-type, Accept,Authorization,Origin"
+  );
+  response.setHeader("Access-Control-Allow-Origin", "*");
+  response.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+  );
+  response.setHeader("Access-Control-Allow-Credentials", true);
+  next();
+};
 
 app.route("/listGames").get((request, response) => {
   let listGames = gameList;
