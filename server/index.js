@@ -72,7 +72,7 @@ let mediaList = [gameList, movieList, bookList];
 
 
 // CORS Middleware
-const cor = (request, response, next) => {
+const cors = (request, response, next) => {
   response.setHeader(
     "Access-Control-Allow-Headers",
     "X-Requested-With,content-type, Accept,Authorization,Origin"
