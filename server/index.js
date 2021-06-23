@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
 mongoose.connect(process.env.DB_CONNECT);
-// const cors = require("cors");
+const cors = require("cors");
 const MongoClient = require("mongodb").MongoClient;
 const morgan = require("morgan");
 
@@ -72,19 +72,19 @@ let mediaList = [gameList, movieList, bookList];
 
 
 // CORS Middleware
-const cors = (request, response, next) => {
-  response.setHeader(
-    "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type, Accept,Authorization,Origin"
-  );
-  response.setHeader("Access-Control-Allow-Origin", "*");
-  response.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-  );
-  response.setHeader("Access-Control-Allow-Credentials", true);
-  next();
-};
+// const cors = (request, response, next) => {
+//   response.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "X-Requested-With,content-type, Accept,Authorization,Origin"
+//   );
+//   response.setHeader("Access-Control-Allow-Origin", "*");
+//   response.setHeader(
+//     "Access-Control-Allow-Methods",
+//     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+//   );
+//   response.setHeader("Access-Control-Allow-Credentials", true);
+//   next();
+// };
 
 app.route("/listGames").get((request, response) => {
   let listGames = gameList;
