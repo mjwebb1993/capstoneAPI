@@ -31,9 +31,10 @@ class DataStructure {
 }
 
 class Game extends DataStructure {
-  constructor(name, yearReleased, [...genre], console) {
+  constructor(name, yearReleased, [...genre], console, picUrl) {
     super(name, yearReleased, [...genre]);
     this.console = console;
+    this.picUrl = picUrl;
   }
 }
 
@@ -48,8 +49,8 @@ class Book extends DataStructure {
     super(name, yearReleased, author, [...genre]);
   }
 }
-const game1 = new Game("Mass Effect", 2007, ["Action", "RPG", "Adventure"], "Multi");
-const game2 = new Game("Mass Effect 2", 2010, ["Action", "RPG", "Adventure"], "Multi");
+const game1 = new Game("Mass Effect", 2007, ["Action", "RPG", "Adventure"], "Multi", "https://upload.wikimedia.org/wikipedia/en/thumb/e/e8/MassEffect.jpg/220px-MassEffect.jpg");
+const game2 = new Game("Mass Effect 2", 2010, ["Action", "RPG", "Adventure"], "Multi", "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/MassEffect2_cover.PNG/220px-MassEffect2_cover.PNG");
 const game3 = new Game("Mass Effect 3", 2012,  ["Action", "RPG", "Adventure"], "Multi");
 const game4 = new Game("Super Mario Galaxy 2", 2010,["Platform", "Action"],  "Wii");
 const game5 = new Game("The Legend of Zelda: Breath of the Wild", 2017, ["Action", "Adventure", "Open World"], "Switch");
