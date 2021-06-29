@@ -59,8 +59,8 @@ const game5 = new Game("The Legend of Zelda: Breath of the Wild", 2017, ["Action
 
 const movie1 = new Movie("Endgame", 2019, ["Action", "Superhero", "Adventure"], "Disney", "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg");
 const movie2 = new Movie("Star Wars: The Force Awakens", 2015, ["Science Fiction", "Action", "Adventure"], "Disney", "https://upload.wikimedia.org/wikipedia/en/a/a2/Star_Wars_The_Force_Awakens_Theatrical_Poster.jpg");
-const movie3 = new Movie("Avengers: Infinity War", 2018, ["Action", "Superhero", "Adventure"], "Disney");
-const movie4 = new Movie("Jurasic World", 2015, ["Science Fiction", "Action"], "Universal", "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg");
+const movie3 = new Movie("Avengers: Infinity War", 2018, ["Action", "Superhero", "Adventure"], "Disney", "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg");
+const movie4 = new Movie("Jurasic World", 2015, ["Science Fiction", "Action"], "Universal", "https://upload.wikimedia.org/wikipedia/en/thumb/6/6e/Jurassic_World_poster.jpg/220px-Jurassic_World_poster.jpg");
 const movie5 = new Movie("Furious 7", 2015, ["Action", "Thriller", "Cars"], "Universal", "https://upload.wikimedia.org/wikipedia/en/thumb/b/b8/Furious_7_poster.jpg/220px-Furious_7_poster.jpg");
 
 const book1 = new Book("The Last Samurai", 2000, ["Fiction"], "Helen DeWitt", "https://upload.wikimedia.org/wikipedia/en/thumb/8/89/HelenDeWitt_TheLastSamurai.jpg/220px-HelenDeWitt_TheLastSamurai.jpg");
