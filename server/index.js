@@ -46,8 +46,8 @@ class Movie extends DataStructure {
   }
 }
 class Book extends DataStructure {
-  constructor(name, yearReleased, author, [...genre], picUrl) {
-    super(name, yearReleased, author, [...genre]);
+  constructor(name, yearReleased, [...genre], author, picUrl) {
+    super(name, yearReleased, [...genre], author);
     this.picUrl = picUrl;
   }
 }
